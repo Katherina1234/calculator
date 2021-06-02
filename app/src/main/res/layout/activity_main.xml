@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mycolor2"
+    android:padding="8dp">
+    <!-- поле результата -->
+    <TextView
+        android:id="@+id/resultField"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/mycolor3"
+        android:textSize="28sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- поле знака операции -->
+
+    <!-- поле ввода чисел -->
+    <EditText
+        android:id="@+id/numberField"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:textSize="28sp"
+        android:background="@color/mycolor3"
+        android:inputType="phone"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultField" />
+
+    <LinearLayout
+        android:id="@+id/zeroButtonPanel"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberField">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClearClick"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:text="C" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onClickSin"
+            android:text="sin" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onClickCos"
+            android:text="cos" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onClickProc"
+            android:text="%" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/firstButtonPanel"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="5px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zeroButtonPanel">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onNumberClick"
+            android:text="7" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onNumberClick"
+            android:text="8" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onNumberClick"
+            android:text="9" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:layout_weight="1"
+            android:onClick="onOperationClick"
+            android:text="/" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondButtonPanel"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="5px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstButtonPanel">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="4" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="5" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onNumberClick"
+            android:text="6" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperationClick"
+            android:text="*" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdButtonPanel"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="5px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondButtonPanel">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onNumberClick"
+            android:text="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onNumberClick"
+            android:text="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onNumberClick"
+            android:text="3" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onOperationClick"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/forthButtonPanel"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="5px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdButtonPanel">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onNumberClick"
+            android:text="," />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:onClick="onNumberClick"
+            android:text="0" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperationClick"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:text="+" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_marginRight="5px"
+            android:background="@color/mycolor4"
+            android:textColor="@color/mycolor5"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onOperationClick"
+            android:text="=" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
